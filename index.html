@@ -28,10 +28,10 @@
             <!-- OS<span>CO</span> -->
             <img src="images/logo3.png" alt="logo osco" width="120" height="120">
           </a>
-          <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
+          <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" id="btn"
             data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
             aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+             <i class="fa-solid fa-bars" style="color: #297540; font-size: 50px;" id="bars"></i>
           </button>
           <div class="collapse navbar-collapse " id="navbarNavDropdown">
             <ul class="navbar-nav ms-auto">
@@ -322,6 +322,26 @@
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
+  </script>
+
+  <script>
+    let btn = document.getElementById('btn');
+    const closebutton = document.getElementById('bars');
+    let x = true;
+
+    btn.addEventListener('click', ()=>{
+      x = !x;
+      if(x){
+          // closebutton.classList.remove("fa-rectangle-xmark");
+          closebutton.classList.remove("fa-regular", "fa-x");
+          closebutton.classList.add("fa-solid", "fa-bars");
+        }
+        else{
+          closebutton.classList.remove("fa-solid", "fa-bars");
+          closebutton.classList.add("fa-regular", "fa-x");
+        }
+    })
+
   </script>
 </body>
 
